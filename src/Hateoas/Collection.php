@@ -97,4 +97,17 @@ class Collection
     {
         return $this->rootName;
     }
+
+    /**
+     * @param  Link     $link
+     * @return Resource
+     */
+    public function addLink(Link $link)
+    {
+        if (!in_array($link, $this->links)) {
+            $this->links[] = $link;
+        }
+
+        return $this;
+    }
 }
